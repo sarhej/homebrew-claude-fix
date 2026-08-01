@@ -10,10 +10,14 @@ brew install sarhej/claude-fix/claude-fix
 ```
 
 That single command taps this repository and installs the `claude-fix` command.
-Equivalently:
+
+**Homebrew 6.0+** requires third-party taps to be trusted before their formulae
+load. If `brew` stops with an *"untrusted tap"* error, run the explicit sequence
+once:
 
 ```bash
 brew tap sarhej/claude-fix
+brew trust sarhej/claude-fix
 brew install claude-fix
 ```
 
