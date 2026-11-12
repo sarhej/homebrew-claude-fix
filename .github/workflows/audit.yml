@@ -16,6 +16,8 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/sarhej"
           ln -sfn "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/sarhej/homebrew-claude-fix"
+          # Homebrew 6+ refuses to load third-party taps until trusted.
+          brew trust sarhej/claude-fix
 
       - name: Audit formula
         run: brew audit --strict --online sarhej/claude-fix/claude-fix
