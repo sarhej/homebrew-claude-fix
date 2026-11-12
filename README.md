@@ -44,10 +44,13 @@ MIT. See [claude-fix](https://github.com/sarhej/claude-fix/blob/main/LICENSE).
 
 ## Releasing
 
-Every claude-fix release needs the formula bumped in lockstep. Update `url` to
-the new tag and recompute `sha256` from the release tarball:
+Every **claude-fix release tag** needs the formula bumped in lockstep. Update
+`url` to the new tag and recompute `sha256` from the release tarball:
 
     curl -sL https://github.com/sarhej/claude-fix/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
 
 Homebrew installs whatever the formula pins, not whatever is on main. A missed
 bump means users silently keep getting the previous release.
+
+**Docs-only** changes on `sarhej/claude-fix` `main` (README, FAQ, etc.) do
+**not** need a formula bump.
