@@ -1,0 +1,21 @@
+name: Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Register this checkout as the tap
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/sarhej"
+          ln -sfn "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/sarhej/homebrew-claude-fix"
+
+      - name: Audit formula
+        run: brew audit --strict --online sarhej/claude-fix/claude-fix
