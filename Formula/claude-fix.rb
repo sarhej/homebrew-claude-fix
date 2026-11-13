@@ -1,8 +1,8 @@
 class ClaudeFix < Formula
   desc "Isolated Claude Desktop profile launchers for macOS (work/personal/clients)"
   homepage "https://github.com/sarhej/claude-fix"
-  url "https://github.com/sarhej/claude-fix/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "d4284c0e0a2f8a741f8cbcd5224a9a4b36c91e741c9f2e6358fd825a91cc8896"
+  url "https://github.com/sarhej/claude-fix/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "ced68652fe0259ae2096c5ad24198c3a52f03a5b77fea78ba875c648cfbd2bd1"
   license "MIT"
 
   depends_on :macos
