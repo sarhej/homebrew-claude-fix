@@ -1,8 +1,8 @@
 class ClaudeFix < Formula
   desc "Isolated Claude Desktop profile launchers for macOS (work/personal/clients)"
   homepage "https://github.com/sarhej/claude-fix"
-  url "https://github.com/sarhej/claude-fix/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "ced68652fe0259ae2096c5ad24198c3a52f03a5b77fea78ba875c648cfbd2bd1"
+  url "https://github.com/sarhej/claude-fix/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "b58178bb19fee5584c5b5d806442519435efe711d8589eed7d81007c45496c40"
   license "MIT"
 
   depends_on :macos
@@ -25,6 +25,7 @@ class ClaudeFix < Formula
 
         claude-fix          # interactive: add the missing profile
         claude-fix help     # all commands and options
+        claude-fix doctor    # check launchers / oauth-router
     EOS
   end
 
